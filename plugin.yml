@@ -1,0 +1,28 @@
+name: iRank
+author: RustDeathrow
+version: 1.05
+
+description: Have players pay to rank up to a new rank. 
+
+main: com.iRank.core.iRank
+depend: [Vault]
+
+commands:
+    rankup:
+        description: Pay to rank up to the next rank. 
+permissions:
+    rankup.*: 
+        description: Give access to all rank up commands. 
+        children:
+            rankup.rankup: true
+            rankup.version: true
+            rankup.reload: true
+    iRank.rankup:
+        description: Permission to run the /rankup command. 
+        default: true
+    iRank.reload:
+        description: Permission to run the /ir reload command. 
+        default: op
+    iRank.version:
+        description: Permission to run the /ir version command. 
+        default: op
